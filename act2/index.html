@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gimnasio Forja: programas de fuerza, cardio y funcional, zonas, planes y clase de prueba gratis.">
+  <title>Forja Gym | Entrena con método</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado y navegación -->
+  <header class="encabezado" id="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a href="#inicio" class="logo" aria-label="Forja Gym, ir al inicio">
+        <img src="img/logo.svg" alt="" width="38" height="38">
+        <span>Forja Gym</span>
+      </a>
+      <button class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#programas">Programas</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto" class="menu__cta">Clase gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <img class="hero__fondo" src="img/hero.svg" alt="Ilustración de una barra olímpica con discos">
+      <div class="contenedor hero__contenido">
+        <h1>Entrena con método, no con suerte</h1>
+        <p>Rutinas guiadas por entrenadores certificados, equipo completo y horario de 5:00 a 23:00. Tu primera clase es gratis.</p>
+        <a href="#contacto" class="boton boton--claro"><i class="fa-solid fa-dumbbell"></i> Reservar clase gratis</a>
+      </div>
+    </section>
+
+    <!-- Datos destacados -->
+    <section class="datos" aria-label="Datos destacados">
+      <div class="contenedor datos__rejilla">
+        <div><i class="fa-solid fa-clock"></i><strong>5:00 a 23:00</strong><span>Lunes a sábado</span></div>
+        <div><i class="fa-solid fa-user-check"></i><strong>12</strong><span>Entrenadores certificados</span></div>
+        <div><i class="fa-solid fa-weight-hanging"></i><strong>80+</strong><span>Máquinas y estaciones</span></div>
+        <div><i class="fa-solid fa-calendar-check"></i><strong>40</strong><span>Clases grupales por semana</span></div>
+      </div>
+    </section>
+
+    <!-- Sección 1: Programas (Cards) -->
+    <section class="seccion" id="programas">
+      <div class="contenedor">
+        <h2>Programas de entrenamiento</h2>
+        <p class="seccion__intro">Elige el que se ajuste a tu meta. Un entrenador te asigna rutina en la primera semana.</p>
+
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <img src="img/fuerza.svg" alt="Ilustración de una barra con discos" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3><i class="fa-solid fa-dumbbell"></i> Fuerza e hipertrofia</h3>
+              <p>Gana masa muscular y fuerza con progresión semanal en pesas libres.</p>
+              <p class="tarjeta__extra" hidden>Tres a cinco días por semana, con rutinas por grupo muscular. Incluye seguimiento de cargas y técnica de sentadilla, peso muerto y press.</p>
+              <button class="boton boton--texto" data-vermas aria-expanded="false"><i class="fa-solid fa-plus"></i> <span>Ver más</span></button>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img src="img/cardio.svg" alt="Ilustración de una línea de pulso cardiaco" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3><i class="fa-solid fa-heart-pulse"></i> Cardio y resistencia</h3>
+              <p>Mejora tu condición con intervalos, bicicletas y caminadoras.</p>
+              <p class="tarjeta__extra" hidden>Sesiones de 30 a 45 minutos con control de frecuencia cardiaca. Sirve para bajar grasa y para preparar carreras de 5 y 10 km.</p>
+              <button class="boton boton--texto" data-vermas aria-expanded="false"><i class="fa-solid fa-plus"></i> <span>Ver más</span></button>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <img src="img/funcional.svg" alt="Ilustración de una pesa rusa" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h3><i class="fa-solid fa-person-running"></i> Funcional</h3>
+              <p>Circuitos con pesa rusa, cuerda y peso corporal para moverte mejor.</p>
+              <p class="tarjeta__extra" hidden>Clases grupales de 50 minutos con máximo 15 personas. Se adaptan a cualquier nivel, incluso si nunca has entrenado.</p>
+              <button class="boton boton--texto" data-vermas aria-expanded="false"><i class="fa-solid fa-plus"></i> <span>Ver más</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Zonas / galería interactiva -->
+    <section class="seccion seccion--oscura" id="zonas">
+      <div class="contenedor">
+        <h2>Conoce las zonas del gimnasio</h2>
+        <p class="seccion__intro">Toca una imagen para ampliarla y revisa qué hay en cada espacio.</p>
+        <div class="galeria">
+          <button class="galeria__item galeria__item--ancho" data-indice="0"><img src="img/fuerza.svg" alt="Zona de pesas libres"><span>Sala de pesas</span></button>
+          <button class="galeria__item" data-indice="1"><img src="img/cardio.svg" alt="Zona de cardio"><span>Zona de cardio</span></button>
+          <button class="galeria__item" data-indice="2"><img src="img/funcional.svg" alt="Zona funcional"><span>Zona funcional</span></button>
+          <button class="galeria__item" data-indice="3"><img src="img/clases.svg" alt="Salón de clases grupales"><span>Salón de clases</span></button>
+          <button class="galeria__item galeria__item--ancho" data-indice="4"><img src="img/recuperacion.svg" alt="Zona de recuperación"><span>Recuperación</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Planes (precio que cambia) -->
+    <section class="seccion" id="planes">
+      <div class="contenedor">
+        <h2>Planes y precios</h2>
+        <p class="seccion__intro">Sin cuota de inscripción. Cambia entre pago mensual y anual para ver tu ahorro.</p>
+
+        <div class="selector" role="group" aria-label="Periodo de pago">
+          <button class="selector__op activo" data-periodo="mensual" aria-pressed="true">Mensual</button>
+          <button class="selector__op" data-periodo="anual" aria-pressed="false">Anual (2 meses gratis)</button>
+        </div>
+
+        <div class="planes">
+          <article class="plan">
+            <h3>Básico</h3>
+            <p class="plan__precio"><span data-base="500">$500</span><small data-unidad>/mes</small></p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Acceso a sala de pesas y cardio</li>
+              <li><i class="fa-solid fa-check"></i> Casilleros y regaderas</li>
+              <li><i class="fa-solid fa-check"></i> Horario de 5:00 a 17:00</li>
+            </ul>
+          </article>
+          <article class="plan plan--destacado">
+            <p class="plan__etiqueta"><i class="fa-solid fa-star"></i> El más elegido</p>
+            <h3>Completo</h3>
+            <p class="plan__precio"><span data-base="800">$800</span><small data-unidad>/mes</small></p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Todo lo del plan Básico</li>
+              <li><i class="fa-solid fa-check"></i> Clases grupales ilimitadas</li>
+              <li><i class="fa-solid fa-check"></i> Horario completo</li>
+              <li><i class="fa-solid fa-check"></i> Rutina personalizada</li>
+            </ul>
+          </article>
+          <article class="plan">
+            <h3>Personal</h3>
+            <p class="plan__precio"><span data-base="1500">$1,500</span><small data-unidad>/mes</small></p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Todo lo del plan Completo</li>
+              <li><i class="fa-solid fa-check"></i> 8 sesiones con entrenador</li>
+              <li><i class="fa-solid fa-check"></i> Plan de nutrición</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion seccion--contacto" id="contacto">
+      <div class="contenedor contacto">
+        <div>
+          <h2>Reserva tu clase gratis</h2>
+          <p class="seccion__intro">Llena el formulario y te confirmamos el horario por correo. Lleva ropa cómoda y una toalla.</p>
+          <ul class="contacto__lista">
+            <li><i class="fa-solid fa-location-dot"></i> zihuatanejo Gro, Centro</li>
+            <li><i class="fa-brands fa-whatsapp"></i> +52 7551133628</li>
+            <li><i class="fa-solid fa-envelope"></i> Angel@forjagym.example</li>
+          </ul>
+        </div>
+        <form class="formulario" id="formulario" novalidate>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required>
+          <label for="meta">Tu meta principal</label>
+          <select id="meta" name="meta" required>
+            <option value="">Selecciona una opción</option>
+            <option>Ganar músculo</option>
+            <option>Bajar de peso</option>
+            <option>Mejorar mi condición</option>
+            <option>Volver a entrenar</option>
+          </select>
+          <p class="formulario__error" id="formError" role="alert" hidden></p>
+          <button type="submit" class="boton boton--cobalto"><i class="fa-solid fa-paper-plane"></i> Reservar clase</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p class="pie__marca"><img src="img/logo.svg" alt="" width="28" height="28"> Forja Gym</p>
+      <p>Actividad 2 · Unidad 1 · Equipo: Angel Renato Santamaria Navarro </p> Angel David Diaz Villanueva <P> </P>David Fernando Lopez Cadena <p></p>Emanuel Villamar Barrientos </p>
+      <div class="pie__redes" aria-label="Redes sociales">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <p class="pie__copy">&copy; <span id="anio"></span> Forja Gym. Proyecto académico.</p>
+    </div>
+  </footer>
+
+  <!-- Ventana modal de la galería -->
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-label="Zona ampliada">
+    <button class="modal__cerrar" id="modalCerrar" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+    <button class="modal__nav modal__nav--ant" id="modalAnt" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+    <figure class="modal__figura">
+      <img id="modalImg" src="" alt="">
+      <figcaption><strong id="modalTitulo"></strong><span id="modalTexto"></span></figcaption>
+    </figure>
+    <button class="modal__nav modal__nav--sig" id="modalSig" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
